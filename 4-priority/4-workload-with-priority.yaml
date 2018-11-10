@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nepetersv1-priority
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nepetersv1-priority
+  template:
+    metadata:
+      labels:
+        app: nepetersv1-priority
+    spec:
+      containers:
+      - name: nepetersv1-priority
+        image: neilpeterson/nepetersv1
+        resources:
+          requests:
+            cpu: 1
+            memory: 128Mi
+          limits:
+            cpu: 1
+            memory: 256Mi
+      priorityClassName: high-priority
