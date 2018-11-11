@@ -3,37 +3,37 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nepetersv2
+  name: nepetersv1-non-tollerated
 spec:
   replicas: 10
   selector:
     matchLabels:
-      app: nepetersv1
+      app: nepetersv1-non-tollerated
   template:
     metadata:
       labels:
-        app: nepetersv1
+        app: nepetersv1-non-tollerated
     spec:
       containers:
-      - name: nepetersv1
+      - name: nepetersv1-non-tollerated
         image: neilpeterson/nepetersv1
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nepetersv2
+  name: nepetersv1-tollerated
 spec:
   replicas: 10
   selector:
     matchLabels:
-      app: nepetersv1
+      app: nepetersv1-non-tollerated
   template:
     metadata:
       labels:
-        app: nepetersv1
+        app: nepetersv1-non-tollerated
     spec:
       containers:
-      - name: nepetersv1
+      - name: nepetersv1-non-tollerated
         image: neilpeterson/nepetersv1
       tolerations:
       - key: dept
