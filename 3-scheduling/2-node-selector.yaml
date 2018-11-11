@@ -1,3 +1,6 @@
+# kubectl label nodes aks-nodepool1-24218660-0 disktype=ssd
+# kubectl label nodes aks-nodepool1-24218660-1 disktype=ssd
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:

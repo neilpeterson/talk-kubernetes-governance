@@ -21,3 +21,8 @@ az aks create \
   --aad-tenant-id $(az keyvault secret show --name AzureTenantID --vault-name nepeterskv --query value -o tsv) \
   --kubernetes-version 1.11.3 \
   --node-count 3
+
+  ## Demo prep
+
+  - Update node names in D3F2
+  - Update node names in D3F3

@@ -1,3 +1,5 @@
+# kubectl taint nodes aks-nodepool1-24218660-2 dept=it:NoSchedule
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
