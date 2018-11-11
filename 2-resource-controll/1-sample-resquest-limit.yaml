@@ -1,0 +1,24 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: azure-vote-back-sample
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: azure-vote-back-sample
+    spec:
+      containers:
+      - name: azure-vote-back-sample
+        image: redis
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 250m
+            memory: 256Mi
+        ports:
+        - containerPort: 6379
+          name: redis
