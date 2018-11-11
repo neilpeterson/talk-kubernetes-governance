@@ -1,16 +1,18 @@
+# kubectl taint nodes aks-nodepool1-24218660-2 dept-
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nepetersv1
+  name: nepetersv1-consume-cpu
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nepetersv1
+      app: nepetersv1-consume-cpu
   template:
     metadata:
       labels:
-        app: nepetersv1
+        app: nepetersv1-consume-cpu
     spec:
       containers:
       - name: nepetersv1
