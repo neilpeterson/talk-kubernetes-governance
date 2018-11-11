@@ -20,4 +20,4 @@ az aks create \
   --aad-client-app-id $(az keyvault secret show --name aksClientAppId --vault-name nepeterskv --query value -o tsv) \
   --aad-tenant-id $(az keyvault secret show --name AzureTenantID --vault-name nepeterskv --query value -o tsv) \
   --kubernetes-version 1.11.3 \
-  --node-count 1
+  --node-count 3
