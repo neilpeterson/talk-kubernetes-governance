@@ -39,21 +39,21 @@
 
 ### Node selector
 
-- kubectl label nodes aks-nodepool1-24218660-0 disktype=ssd
-- kubectl label nodes aks-nodepool1-24218660-1 disktype=ssd
-- kubectl describe node aks-nodepool1-24218660-0
+- kubectl label nodes aks-nodepool1-19214297-0 disktype=ssd
+- kubectl label nodes aks-nodepool1-19214297-1 disktype=ssd
+- kubectl describe node aks-nodepool1-19214297-0
 - kubectl create -f 3-scheduling/2-node-selector.yaml
 - kubectl get pods -o wide
 - kubectl delete -f 3-scheduling/2-node-selector.yaml
 
 ### Taint / Tollerations
 
-- kubectl taint nodes aks-nodepool1-24218660-0 dept=it:NoSchedule
-- kubectl describe node aks-nodepool1-24218660-0
+- kubectl taint nodes aks-nodepool1-19214297-0 dept=it:NoSchedule
+- kubectl describe node aks-nodepool1-19214297-0
 - kubectl create -f 3-scheduling/3-taint-tolleration.yaml
 - kubectl get pods -o wide
 - kubectl delete -f 3-scheduling/3-taint-tolleration.yaml
-- kubectl taint nodes aks-nodepool1-24218660-0 dept-
+- kubectl taint nodes aks-nodepool1-19214297-0 dept-
 
 ## 4 - Priority
 
