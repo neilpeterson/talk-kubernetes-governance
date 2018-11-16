@@ -6,8 +6,8 @@ minikube start --kubernetes-version=v1.11.3
 
 ## AAD enabled cluster
 
-RESOURCE_GROUP=aksAADIntegrated
-AKS_NAME=aksAADIntegrated
+RESOURCE_GROUP=WinOpsAKSDemoAAD
+AKS_NAME=WinOpsAKSDemoAAD
 
 az group create --name $RESOURCE_GROUP --location eastus
 
@@ -24,5 +24,6 @@ az aks create \
 
   ## Demo prep
 
-  - Update node names in D3F2
-  - Update node names in D3F3
+  - Update node names in ./3-scheduling/1-node-sticky.yaml
+  - Update node names in ./3-scheduling/2-node-selector.yaml
+  - Update node names in ./3-scheduling/3-taint-tollerations.yaml
