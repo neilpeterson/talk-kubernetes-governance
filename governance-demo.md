@@ -26,6 +26,7 @@ kubectl delete -f ./2-resource-controll
 
 # Demo 3: Scheduling
 # Node sticky
+kubectl get nodes
 kubectl create -f 3-scheduling/1-node-sticky.yaml
 kubectl get pods -o wide
 kubectl delete -f 3-scheduling/1-node-sticky.yaml
