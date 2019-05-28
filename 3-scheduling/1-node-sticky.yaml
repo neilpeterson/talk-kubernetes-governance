@@ -31,4 +31,4 @@ spec:
         image: neilpeterson/nepetersv1
         ports:
         - containerPort: 80
-      nodeName: aks-nodepool1-19214297-2
+      nodeName: aks-nodepool1-35171595-2
