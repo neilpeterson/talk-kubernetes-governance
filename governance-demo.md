@@ -1,11 +1,11 @@
-# Demo 1 - RBAC / AAD
+# Demo 1: RBAC / AAD
 kubectl get pods
 kubectl create -f ./1-rbac-aad/1-rbac.yaml
 kubectl create -f ./1-rbac-aad/2-azure-vote.yaml
 kubectl create -f ./1-rbac-aad/2-azure-vote.yaml --namespace lob
 kubectl delete -f ./1-rbac-aad/2-azure-vote.yaml --namespace lob
 
-# Demo 2 - Resource Controll
+# Demo 2: Resource Controll
 # Simple resource request and limit
 kubectl create -f 2-resource-controll/1-sample-resquest-limit.yaml
 kubectl describe pod azure-vote-back-sample
@@ -21,7 +21,7 @@ kubectl create -f 2-resource-controll/3-second-resource-quota-pod.yaml
 kubectl create -f 2-resource-controll/4-resource-limits.yaml
 kubectl describe pod nepetersv1-no-limits --namespace pink
 
-# 3 - Scheduling
+# Demo 3: Scheduling
 # Node sticky
 kubectl create -f 3-scheduling/1-node-sticky.yaml
 kubectl get pods -o wide
@@ -45,7 +45,7 @@ kubectl get pods -o wide
 kubectl delete -f 3-scheduling/3-taint-tolleration.yaml
 kubectl taint nodes aks-nodepool1-35171595-0 dept-
 
-# 4 - Priority
+# 4: Priority
 # Priority class
 kubectl create -f 4-priority/1-priority-class.yaml
 
