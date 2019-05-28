@@ -21,6 +21,9 @@ kubectl create -f 2-resource-controll/3-second-resource-quota-pod.yaml
 kubectl create -f 2-resource-controll/4-resource-limits.yaml
 kubectl describe pod nepetersv1-no-limits --namespace pink
 
+# Clean up
+kubectl delete -f ./2-resource-controll
+
 # Demo 3: Scheduling
 # Node sticky
 kubectl create -f 3-scheduling/1-node-sticky.yaml
