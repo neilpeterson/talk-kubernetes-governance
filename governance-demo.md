@@ -47,7 +47,7 @@ kubectl describe node aks-nodepool1-35199716-0
 kubectl create -f 3-scheduling/3-taint-tolleration.yaml
 kubectl get pods -o wide
 kubectl delete -f 3-scheduling/3-taint-tolleration.yaml
-kubectl taint nodes aks-nodepool1-35171595-0 dept-
+kubectl taint nodes aks-nodepool1-35199716-0 dept-
 
 # 4: Priority
 # Priority class
