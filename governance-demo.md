@@ -1,3 +1,5 @@
+kubectl config get-contexts
+
 # Demo 1: RBAC / AAD
 kubectl get pods
 kubectl create -f ./1-rbac-aad/1-rbac.yaml
@@ -51,7 +53,9 @@ kubectl taint nodes aks-nodepool1-35199716-0 dept-
 
 # 4: Priority
 # Priority class
+kubectl get priorityclass
 kubectl create -f 4-priority/1-priority-class.yaml
+kubectl get priorityclass
 
 # Slam workload
 kubectl create -f 4-priority/2-slam-workload.yaml
@@ -65,3 +69,6 @@ kubectl describe pod nepetersv1-no-priority
 # Start pod with high priority
 kubectl create -f 4-priority/4-workload-with-priority.yaml
 kubectl get pods
+
+# Clean up
+kubectl delete -f ./4-priority/
