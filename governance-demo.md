@@ -1,8 +1,11 @@
 kubectl config get-contexts
 
 # Demo 1: RBAC / AAD
+
 kubectl get pods
 kubectl create -f ./1-rbac-aad/1-rbac.yaml
+kubectl get pods
+kubectl get pods -n lob
 kubectl create -f ./1-rbac-aad/2-azure-vote.yaml
 kubectl create -f ./1-rbac-aad/2-azure-vote.yaml --namespace lob
 kubectl delete -f ./1-rbac-aad/2-azure-vote.yaml --namespace lob
