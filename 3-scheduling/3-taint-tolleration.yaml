@@ -1,4 +1,4 @@
-# kubectl taint nodes aks-nodepool1-35171595-2 dept=it:NoSchedule
+# kubectl taint nodes aks-nodepool1-33326899-2 dept=it:NoSchedule
 
 apiVersion: apps/v1
 kind: Deployment

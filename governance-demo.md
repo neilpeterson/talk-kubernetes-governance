@@ -37,22 +37,22 @@ kubectl get pods -o wide
 kubectl delete -f 3-scheduling/1-node-sticky.yaml
 
 # Node selector
-kubectl label nodes aks-nodepool1-35199716-0 disktype=ssd
-kubectl label nodes aks-nodepool1-35199716-1 disktype=ssd
-kubectl describe node aks-nodepool1-35199716-0
+kubectl label nodes aks-nodepool1-33326899-0 disktype=ssd
+kubectl label nodes aks-nodepool1-33326899-1 disktype=ssd
+kubectl describe node aks-nodepool1-33326899-0
 kubectl create -f 3-scheduling/2-node-selector.yaml
 kubectl get pods -o wide
 kubectl delete -f 3-scheduling/2-node-selector.yaml
-kubectl label nodes aks-nodepool1-35199716-0 disktype-
-kubectl label nodes aks-nodepool1-35199716-1 disktype-
+kubectl label nodes aks-nodepool1-33326899-0 disktype-
+kubectl label nodes aks-nodepool1-33326899-1 disktype-
 
 # Taint / Tollerations
-kubectl taint nodes aks-nodepool1-35199716-0 dept=it:NoSchedule
-kubectl describe node aks-nodepool1-35199716-0
+kubectl taint nodes aks-nodepool1-33326899-0 dept=it:NoSchedule
+kubectl describe node aks-nodepool1-33326899-0
 kubectl create -f 3-scheduling/3-taint-tolleration.yaml
 kubectl get pods -o wide
 kubectl delete -f 3-scheduling/3-taint-tolleration.yaml
-kubectl taint nodes aks-nodepool1-35199716-0 dept-
+kubectl taint nodes aks-nodepool1-33326899-0 dept-
 
 # 4: Priority
 # Priority class
