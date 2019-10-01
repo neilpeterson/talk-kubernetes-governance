@@ -1,5 +1,3 @@
-kubectl config get-contexts
-
 # Demo 1: RBAC / AAD
 
 kubectl get pods
